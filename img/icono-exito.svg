@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="successGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a9d8f"/>
+      <stop offset="100%" style="stop-color:#21867a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- Círculo principal -->
+  <circle cx="50" cy="50" r="48" fill="url(#successGrad)" filter="url(#glow)"/>
+  <circle cx="50" cy="50" r="48" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Checkmark animado -->
+  <path d="M25 52 L43 70 L75 35" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="6" 
+        stroke-linecap="round" 
+        stroke-linejoin="round"
+        stroke-dasharray="70"
+        stroke-dashoffset="70">
+    <animate attributeName="stroke-dashoffset" from="70" to="0" dur="0.5s" fill="freeze" begin="0.1s"/>
+  </path>
+  
+  <!-- Partículas de celebración -->
+  <g fill="#ffffff" opacity="0.8">
+    <circle cx="18" cy="22" r="2.5">
+      <animate attributeName="r" from="0" to="2.5" dur="0.3s" begin="0.6s" fill="freeze"/>
+      <animate attributeName="opacity" from="0.8" to="0" dur="0.8s" begin="0.6s" fill="freeze"/>
+    </circle>
+    <circle cx="82" cy="22" r="2.5">
+      <animate attributeName="r" from="0" to="2.5" dur="0.3s" begin="0.7s" fill="freeze"/>
+      <animate attributeName="opacity" from="0.8" to="0" dur="0.8s" begin="0.7s" fill="freeze"/>
+    </circle>
+    <circle cx="18" cy="78" r="2.5">
+      <animate attributeName="r" from="0" to="2.5" dur="0.3s" begin="0.8s" fill="freeze"/>
+      <animate attributeName="opacity" from="0.8" to="0" dur="0.8s" begin="0.8s" fill="freeze"/>
+    </circle>
+    <circle cx="82" cy="78" r="2.5">
+      <animate attributeName="r" from="0" to="2.5" dur="0.3s" begin="0.9s" fill="freeze"/>
+      <animate attributeName="opacity" from="0.8" to="0" dur="0.8s" begin="0.9s" fill="freeze"/>
+    </circle>
+  </g>
+  
+  <!-- Pequeña tortuga celebrando -->
+  <g transform="translate(50, 88) scale(0.25)" fill="#ffffff" opacity="0.9">
+    <ellipse cx="0" cy="0" rx="10" ry="7" fill="#2a9d8f"/>
+    <ellipse cx="0" cy="-1" rx="7" ry="4" fill="#21867a"/>
+    <ellipse cx="-8" cy="-1" rx="3" ry="2.5" fill="#2a9d8f"/>
+    <circle cx="-9" cy="-2" r="0.8" fill="#ffffff"/>
+    <ellipse cx="5" cy="-1" rx="2" ry="1.5" fill="#2a9d8f"/>
+  </g>
+</svg>

@@ -228,6 +228,10 @@ function initFormulario() {
     const form = $(".formulario");
     if (!form) return; // Solo en contacto.php
 
+    const btnEnviar = $("#btn-enviar");
+    const btnTexto = btnEnviar ? btnEnviar.querySelector(".btn-texto") : null;
+    const btnCargando = btnEnviar ? btnEnviar.querySelector(".btn-cargando") : null;
+
     const campos = {
         nombre: {
             el: form.nombre,
@@ -295,22 +299,47 @@ function initFormulario() {
         if (campo !== "privacidad") cfg.el.addEventListener("blur", () => validarCampo(campo));
     });
 
-    // Envío del formulario
+    // Envío del formulario con feedback visual
     form.addEventListener("submit", e => {
+        console.log("[Formulario] Iniciando validación...");
+
         let valido = true;
-        Object.keys(campos).forEach(c => { if (!validarCampo(c)) valido = false; });
+        Object.keys(campos).forEach(c => {
+            const resultado = validarCampo(c);
+            console.log(`[Formulario] Campo ${c}: ${resultado ? "válido" : "inválido"}`);
+            if (!resultado) valido = false;
+        });
 
         if (!valido) {
             e.preventDefault();
+            console.log("[Formulario] Validación fallida, enviando prevenido");
             const primerError = form.querySelector(".error");
-            if (primerError) primerError.focus();
+            if (primerError) {
+                primerError.focus();
+                primerError.scrollIntoView({ behavior: "smooth", block: "center" });
+            }
+            return;
         }
-        // Si es válido, envía normalmente a enviar.php
+
+        console.log("[Formulario] Validación exitosa, enviando...");
+
+        // Mostrar estado de carga
+        if (btnEnviar) {
+            btnEnviar.disabled = true;
+            if (btnTexto) btnTexto.style.display = "none";
+            if (btnCargando) btnCargando.style.display = "inline-flex";
+        }
+
+        // Si hay error en el servidor, el PHP redirige de vuelta con errores
+        // Si todo va bien, redirige a gracias.php
+        // No prevenimos el envío normal
     });
 
     // Inicializar contador
     const contador = $("#motivo-longitud");
     if (contador && form.motivo) contador.textContent = form.motivo.value.length;
+
+    console.log("[Formulario] Inicializado correctamente");
 }
 
 // ============================================================================

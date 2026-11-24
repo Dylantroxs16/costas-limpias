@@ -52,6 +52,20 @@ include "header.php";
                     <p>= 30-50 niños educados + familias impactadas + futuros guardianes</p>
                 </div>
             </article>
+            <article class="tarjeta">
+                <img src="img/impacto-logistica.jpg" alt="Impacto logística" loading="lazy">
+                <div class="tarjeta-contenido">
+                    <h3>1 apoyo logístico</h3>
+                    <p>= Evita vertederos ilegales + trazabilidad residuos + economía circular</p>
+                </div>
+            </article>
+            <article class="tarjeta">
+                <img src="img/impacto-patrocinio.jpg" alt="Impacto patrocinio" loading="lazy">
+                <div class="tarjeta-contenido">
+                    <h3>1 patrocinio corporativo</h3>
+                    <p>= Impacto medible + reputación + equipo cohesionado + playa custodiada</p>
+                </div>
+            </article>
         </div>
 
         <div style="text-align: center; margin-top: 2rem;">

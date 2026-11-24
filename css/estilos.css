@@ -231,6 +231,26 @@ ul {
     box-shadow: 0 6px 20px rgba(42, 157, 143, 0.4);
 }
 
+/* Botón en estado de carga */
+.boton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+}
+.boton .btn-cargando {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.boton .spinner {
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 /* ==========================================================================
    HERO / PORTADA
    ========================================================================== */
