@@ -137,42 +137,42 @@ function initCardsAyuda() {
             descripcion: "Únete a limpiezas semanales los sábados 7-11 AM. Sin experiencia previa, solo ganas de ayudar.",
             modalidad: "Presencial • Sábados 7-11 AM • Pacífico y Caribe",
             impacto: "~15 kg residuos/jornada • 200 m² playa limpia",
-            img: "img/voluntariado.jpg"
+            img: "img/impacto-voluntariado.jpg"
         },
         {
             titulo: "Adopción de tramo de playa",
             descripcion: "Tu empresa o grupo adopta 1 km de playa por 1 año. 12 limpiezas + monitoreo + señalética con tu logo.",
             modalidad: "Compromiso anual • 12 jornadas • Señalética inclusiva",
             impacto: "Reducción 70-80% residuos • Custodia continua",
-            img: "img/adopcion.jpg"
+            img: "img/impacto-adopcion.jpg"
         },
         {
             titulo: "Donación de insumos",
             descripcion: "Provee sacos biodegradables, guantes reforzados, bolsas de separación, pinzas, chalecos, botiquines.",
             modalidad: "Donación única o recurrente • Entrega en bodega o envío",
             impacto: "1 kit = equipa 10 voluntarios • ~150 kg capacidad",
-            img: "img/insumos.jpg"
+            img: "img/impacto-insumos.jpg"
         },
         {
             titulo: "Logística y transporte",
             descripcion: "Facilita vehículos, combustible o conductores para llevar residuos a centros de acopio autorizados.",
             modalidad: "Vehículo propio o patrocinio combustible • Rutas programadas",
             impacto: "Evita vertederos ilegales • Trazabilidad • Economía circular",
-            img: "img/logistica.jpg"
+            img: "img/impacto-logistica.jpg"
         },
         {
             titulo: "Educación ambiental",
             descripcion: "Patrocina talleres en escuelas costeras: limpieza simulada, charlas de biólogos, kits didácticos.",
             modalidad: "1-2 días por escuela • Grados 4-6 • Material incluido",
             impacto: "30-50 niños/jornada • Familias impactadas • Guardianes futuros",
-            img: "img/educacion.jpg"
+            img: "img/impacto-educacion.jpg"
         },
         {
             titulo: "Patrocinio corporativo",
             descripcion: "Alianza anual: jornadas corporativas, adopción de tramo, reportes RSE, visibilidad en redes y playas.",
             modalidad: "Convenio 12 meses • KPIs definidos • Informe trimestral",
             impacto: "Impacto medible + reputación + equipo cohesionado",
-            img: "img/patrocinio.jpg"
+            img: "img/impacto-patrocinio.jpg"
         }
     ];
 
